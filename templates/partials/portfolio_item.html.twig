@@ -1,0 +1,18 @@
+<section>
+    {% if page.header.custom.coverImage|first.path %}
+        <img
+            src="{{ page.header.custom.coverImage|first.path }}"
+            alt="Boek cover, {{ page.header.title }}"
+        >
+
+    {% else %}
+        <img src=" images/placeholder.png">
+    {% endif %}
+
+    <div>
+        <h2><a href="{{ page.url }}">{{ page.header.title }}</a></h2>
+        <p>
+           {{ page.content|truncate(160) }}
+        </p>
+    </div>
+</section>

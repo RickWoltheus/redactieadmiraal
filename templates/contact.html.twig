@@ -1,0 +1,36 @@
+{% extends '../../saturn/templates/partials/base.html.twig' %}
+{% block content %}
+
+  <header>
+    <h2>{{ page.header.title }}</h2>
+  </header>
+
+
+        <div class="contact__foto1 one-half column">
+            <img src="user/themes/saturn/img/trudyadmiraal.jpg">
+        </div>
+        <div class="contact__foto2 one-half column">
+            <img src="user/themes/saturn/img/visite.jpg">
+
+        </div>
+            <div class="gegevens one-half column">
+                <h3>Trudy Admiraal, Amsterdam</h3>
+                <p>06-21885085</p>
+                <p><a href="mailto:mail@redactieadmiraal.nl?Subject=Hello%20again" target="_top">mail@redactieadmiraal.nl</a></p>
+
+                <p>KvK 57461139</p>
+                <div class="fotos">
+
+
+                    <img src="user/themes/saturn/img/linkedin.svg">
+                    <img src="user/themes/saturn/img/twitter.svg">
+                </div>
+                {{ page.content }}
+            </div>
+
+
+
+
+
+
+{% endblock %}

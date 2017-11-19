@@ -1,0 +1,46 @@
+
+{% embed 'partials/base.html.twig' %}
+
+    {% set collection = page.collection() %}
+    {% set base_url = page.url %}
+    {% set feed_url = base_url %}
+
+    {% if base_url == '/' %}
+        {% set base_url = '' %}
+    {% endif %}
+
+    {% if base_url == base_url_relative %}
+        {% set feed_url = base_url~'/'~page.slug %}
+    {% endif  %}
+
+    {% block content %}
+        <article class="portfolio">
+            <section role="navigation">
+                <h1>Portfolio</h1>
+                <a href="#Artikelen" class="filterLink">Artikelen</a>
+                <a href="#Boeken" class="filterLink">Boeken</a>
+                <a href="#Redactie" class="filterLink">Redactie</a>
+                <span class="spacer" aria-hidden="true"></span>
+                <input type="text" placeholder="Zoeken">
+            </section>
+            {% for child in collection %}
+                {% include 'partials/portfolio_item.html.twig' with {'page':child, 'truncate':true} %}
+            {% endfor %}
+
+            {% if config.plugins.pagination.enabled and collection.params.pagination %}
+                {% include 'partials/pagination.html.twig' with {'base_url': page.url, 'pagination':collection.params.pagination} %}
+            {% endif %}
+
+
+            <button>meer tonen</button>
+        </article>
+
+
+
+    {% endblock %}
+
+{% endembed %}
+
+
+
+

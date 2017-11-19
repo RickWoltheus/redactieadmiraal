@@ -1,0 +1,21 @@
+{% extends 'partials/base.html.twig' %}
+{% block content %}
+<article class="portfolio-item">
+    <section role="navigation">
+        <a href="portfolio.html" aria-label="terug naar portfolio."><img src="links/arrow-left.svg" alt="back arrow."></a>
+    </section>
+    <section class="portfolio-item--image">
+        <img
+            src="../{{ page.header.custom.coverImage|first.path }}"
+            alt="Boek cover, {{ page.title }}."
+        >
+    </section>
+    <section class="portfolio-item--desc">
+        <h2>{{ page.title }}</h2>
+        <p>
+            {{ page.content }}
+        </p>
+        <h3>Categorieën: <a href="">{{ page.header.custom.category }}</a></h3>
+    </section>
+</article>
+{% endblock %}
