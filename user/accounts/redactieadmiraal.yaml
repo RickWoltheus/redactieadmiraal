@@ -1,0 +1,20 @@
+email: mail@redactieadmiraal.nl
+access:
+  admin:
+    super: 'true'
+    login: 'true'
+    configuration_info: 'false'
+    settings: 'false'
+    pages: 'false'
+    maintenance: 'false'
+    statistics: 'false'
+fullname: 'Trudy Admiraal'
+title: redacteur
+state: enabled
+hashed_password: $2y$10$UvYN4CbdvQxT69eWEjpbp.uyNroEFn2Od.hwmaKScbShvZPkW6ND.
+language: en
+login_attempts: {  }
+twofa_secret: 5UPO5JM6ZODCSIFCRUPESE6RJWMX3QD7
+twofa_enabled: false
+groups:
+  - redacteur

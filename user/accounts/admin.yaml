@@ -1,0 +1,26 @@
+email: 18701@ma-web.nl
+fullname: 'Rick Woltheus'
+title: top-admin
+state: enabled
+access:
+  admin:
+    super: 'true'
+    login: 'true'
+    configuration: 'false'
+    configuration_site: 'false'
+    configuration_media: 'false'
+    configuration_info: 'false'
+    settings: 'false'
+    pages: 'true'
+    maintenance: 'false'
+    statistics: 'true'
+    plugins: 'false'
+    themes: 'false'
+    users: 'false'
+  site:
+    login: 'true'
+hashed_password: $2y$10$RPM2flUnTv75IX297wSOKeX9rAC1Lkk6c9R7dxXBHMtR1t8SwIn2m
+language: en
+login_attempts: {  }
+twofa_secret: QO5J2TCPMNQ33CH3367Y4UWHIURMY3XP
+twofa_enabled: false

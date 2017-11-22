@@ -1,0 +1,34 @@
+<div class="post one-half column row">
+
+    {% if page.header.custom.coverImage|first.path %}
+    <img src=" {{ page.header.custom.coverImage|first.path }}">
+    {% else %}
+    <img src=" images/placeholder.png">
+    {% endif %}
+
+
+    <div class="portfolio">
+    {% if page.header.link %}
+        <a href="{{ page.header.link }}"><h1>{{ page.title }}</h1></a>
+    {% else %}
+        <a href="{{ page.url }}"> <h1>{{ page.title }}</h1></a>
+    {% endif %}
+
+    <div class="in-content">
+     {{ page.header.custom.smallText }}
+    </div>
+
+
+    {% if show_prev_next %}
+        <p class="prev-next">
+            {% if not page.isLast %}
+                <a class="btn btn-black" href="{{ page.prevSibling.url }}"><i class="fa fa-arrow-left"></i> PREVIOUS</a>
+            {% endif %}
+
+            {% if not page.isFirst %}
+                <a class="btn btn-black" href="{{ page.nextSibling.url }}">NEXT <i class="fa fa-arrow-right"></i></a>
+            {% endif %}
+        </p>
+    {% endif %}
+</div>
+</div>

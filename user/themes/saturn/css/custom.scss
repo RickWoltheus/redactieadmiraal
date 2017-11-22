@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Source+Sans+Pro');
+$sec-color: #f77c2a;
+$font-source-code-pro: 'Source Code Pro', monospace;
+$font-source-Sans-pro: 'Source Sans Pro', sans-serif;
+
+@import "components/theme.scss";
+@import "components/background.scss";
+@import "components/portfolio.scss";
+@import "components/contact.scss";

@@ -1,0 +1,28 @@
+
+.contact__foto1 {
+  background-color: grey;
+  width: 20%;
+
+  display: inline-block;
+}
+
+.contact__foto2 {
+  background-color: grey;
+
+
+  margin-left: 1em;
+  display: inline-block;
+}
+
+.gegevens {
+
+  width: 25%;
+  text-align: left;
+}
+
+.fotos img {
+  display: inline-block;
+  width: 15%;
+  height: 15%;
+  cursor: pointer;
+}
