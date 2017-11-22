@@ -1,0 +1,10 @@
+redacteur:
+  groupname: administrators
+  readableName: Administrators
+  description: 'The group of administrators'
+  icon: child
+  access:
+    admin:
+      login: true
+    site:
+      login: true
