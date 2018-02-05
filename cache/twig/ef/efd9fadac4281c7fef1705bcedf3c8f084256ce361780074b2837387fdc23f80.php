@@ -41,7 +41,7 @@ class __TwigTemplate_8b6c1da4ed823f0cf6ab8a00541da440a09e5d248cae50093bd40023a3f
             sizes=\"
           (max-width: 800px) 70vw,
           (max-width: 1024px) 350px,
-          (max-width: 1281px) 500px,
+          (max-width: 1281px) 400px,
           600px
         \"
             alt=\"Tekening van Trudy Admiraal's bureau.\"
@@ -50,10 +50,10 @@ class __TwigTemplate_8b6c1da4ed823f0cf6ab8a00541da440a09e5d248cae50093bd40023a3f
     </figure>
     <article class=\"home\">
         <p>
-            <span>Redactie Admiraal</span>, dat ben ik: schrijvend journalist Trudy Admiraal. Ik schrijf artikelen, interviews, speeches en boeken. Mijn soepele pen is ontdekt door verschillende opdrachtgevers en bladen. Ik ben ook een bedreven eindredacteur die teksten van anderen beter maakt.<br><br>
-            In de portfolio map vindt u voorbeelden van mijn werk.
-            Sinds 2016 is mijn bedrijf uitgebreid met uitgeverij Editie does.
-            Kijk rustig rond op mijn site en bel of mail me als ik u kan helpen.
+            ";
+        // line 25
+        echo $this->getAttribute((isset($context["page"]) ? $context["page"] : null), "content", array());
+        echo "
         </p>
         <a role=\"button\" href=\"schrijfwerk\">Naar Schrijfwerk</a>
     </article>
@@ -73,7 +73,7 @@ class __TwigTemplate_8b6c1da4ed823f0cf6ab8a00541da440a09e5d248cae50093bd40023a3f
 
     public function getDebugInfo()
     {
-        return array (  31 => 3,  28 => 2,  11 => 1,);
+        return array (  55 => 25,  31 => 3,  28 => 2,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -101,7 +101,7 @@ class __TwigTemplate_8b6c1da4ed823f0cf6ab8a00541da440a09e5d248cae50093bd40023a3f
             sizes=\"
           (max-width: 800px) 70vw,
           (max-width: 1024px) 350px,
-          (max-width: 1281px) 500px,
+          (max-width: 1281px) 400px,
           600px
         \"
             alt=\"Tekening van Trudy Admiraal's bureau.\"
@@ -110,10 +110,7 @@ class __TwigTemplate_8b6c1da4ed823f0cf6ab8a00541da440a09e5d248cae50093bd40023a3f
     </figure>
     <article class=\"home\">
         <p>
-            <span>Redactie Admiraal</span>, dat ben ik: schrijvend journalist Trudy Admiraal. Ik schrijf artikelen, interviews, speeches en boeken. Mijn soepele pen is ontdekt door verschillende opdrachtgevers en bladen. Ik ben ook een bedreven eindredacteur die teksten van anderen beter maakt.<br><br>
-            In de portfolio map vindt u voorbeelden van mijn werk.
-            Sinds 2016 is mijn bedrijf uitgebreid met uitgeverij Editie does.
-            Kijk rustig rond op mijn site en bel of mail me als ik u kan helpen.
+            {{ page.content }}
         </p>
         <a role=\"button\" href=\"schrijfwerk\">Naar Schrijfwerk</a>
     </article>

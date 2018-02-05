@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/wamp64/www/school/jaar3/redactieadmiraal/grav/user/config/site.yaml',
-    'modified' => 1510136983,
+    'modified' => 1511360697,
     'data' => [
         'title' => 'Redactie Admiraal',
         'default_lang' => 'en',

@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/wamp64/www/school/jaar3/redactieadmiraal/grav/user/plugins/admin/blueprints/admin/pages/new.yaml',
-    'modified' => 1511346007,
+    'modified' => 1511355210,
     'data' => [
         'rules' => [
             'slug' => [
@@ -30,6 +30,7 @@ return [
                     'type' => 'text',
                     'label' => 'PLUGIN_ADMIN.FOLDER_NAME',
                     'help' => 'PLUGIN_ADMIN.FOLDER_NAME_HELP',
+                    'readonly' => true,
                     'validate' => [
                         'rule' => 'slug',
                         'required' => true
@@ -39,6 +40,8 @@ return [
                     'type' => 'parents',
                     'label' => 'PLUGIN_ADMIN.PARENT_PAGE',
                     'classes' => 'fancy',
+                    'default' => '/portfolio',
+                    'readonly' => true,
                     'validate' => [
                         'required' => true
                     ]
@@ -48,8 +51,8 @@ return [
                     'classes' => 'fancy',
                     'label' => 'PLUGIN_ADMIN.PAGE_FILE',
                     'help' => 'PLUGIN_ADMIN.PAGE_FILE_HELP',
-                    'data-options@' => '\\Grav\\Plugin\\AdminPlugin::pagesTypes',
-                    'data-default@' => '\\Grav\\Plugin\\Admin\\Admin::getLastPageName',
+                    'data-options@' => '\\Grav\\Common\\Page\\Pages::types',
+                    'default' => 'project',
                     'validate' => [
                         'required' => true
                     ]

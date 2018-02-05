@@ -160,9 +160,15 @@ class __TwigTemplate_784a87ce1c8e9ea1da04729afbe5be55b8de651ba0e06a46fbb2160791a
         // line 110
         $this->displayBlock('body', $context, $blocks);
         // line 115
-        echo "
+        echo "<footer>
+    <script type='text/javascript' src='";
+        // line 116
+        echo $this->env->getExtension('Grav\Common\Twig\TwigExtension')->urlFunc("plugin://simplesearch/js/simplesearch.js");
+        echo "'></script>
+</footer>
 </body>
 </html>
+
 ";
     }
 
@@ -234,10 +240,7 @@ class __TwigTemplate_784a87ce1c8e9ea1da04729afbe5be55b8de651ba0e06a46fbb2160791a
     {
         // line 98
         echo "    <nav class=\"navigation\">
-        <a href=\"";
-        // line 99
-        echo ((((isset($context["base_url"]) ? $context["base_url"] : null) == "")) ? ("/") : ((isset($context["base_url"]) ? $context["base_url"] : null)));
-        echo "\" class=\"logo\">Redactie Admiraal</a>
+        <a href=\"home\" class=\"logo\">Redactie Admiraal</a>
     ";
         // line 100
         $this->displayBlock('header_navigation', $context, $blocks);
@@ -286,7 +289,7 @@ class __TwigTemplate_784a87ce1c8e9ea1da04729afbe5be55b8de651ba0e06a46fbb2160791a
 
     public function getDebugInfo()
     {
-        return array (  273 => 112,  268 => 113,  266 => 112,  263 => 111,  260 => 110,  256 => 102,  253 => 101,  250 => 100,  245 => 103,  243 => 100,  239 => 99,  236 => 98,  233 => 97,  229 => 90,  226 => 89,  223 => 88,  219 => 85,  216 => 84,  213 => 83,  210 => 82,  207 => 81,  199 => 91,  197 => 88,  191 => 86,  189 => 81,  180 => 80,  178 => 79,  173 => 76,  170 => 75,  163 => 115,  161 => 110,  154 => 105,  152 => 97,  148 => 96,  144 => 94,  142 => 75,  137 => 73,  134 => 72,  132 => 71,  127 => 68,  122 => 63,  120 => 61,  118 => 60,  116 => 59,  114 => 58,  112 => 57,  109 => 55,  107 => 53,  105 => 52,  103 => 51,  101 => 50,  99 => 49,  96 => 47,  94 => 45,  92 => 44,  90 => 43,  88 => 42,  86 => 41,  84 => 40,  82 => 39,  80 => 38,  78 => 37,  76 => 36,  74 => 35,  72 => 34,  70 => 33,  67 => 31,  64 => 27,  62 => 26,  60 => 25,  58 => 24,  55 => 22,  53 => 21,  51 => 20,  49 => 19,  47 => 18,  45 => 17,  42 => 15,  40 => 14,  37 => 12,  35 => 11,  33 => 10,  30 => 8,  28 => 7,  26 => 6,);
+        return array (  276 => 112,  271 => 113,  269 => 112,  266 => 111,  263 => 110,  259 => 102,  256 => 101,  253 => 100,  248 => 103,  246 => 100,  242 => 98,  239 => 97,  235 => 90,  232 => 89,  229 => 88,  225 => 85,  222 => 84,  219 => 83,  216 => 82,  213 => 81,  205 => 91,  203 => 88,  197 => 86,  195 => 81,  186 => 80,  184 => 79,  179 => 76,  176 => 75,  166 => 116,  163 => 115,  161 => 110,  154 => 105,  152 => 97,  148 => 96,  144 => 94,  142 => 75,  137 => 73,  134 => 72,  132 => 71,  127 => 68,  122 => 63,  120 => 61,  118 => 60,  116 => 59,  114 => 58,  112 => 57,  109 => 55,  107 => 53,  105 => 52,  103 => 51,  101 => 50,  99 => 49,  96 => 47,  94 => 45,  92 => 44,  90 => 43,  88 => 42,  86 => 41,  84 => 40,  82 => 39,  80 => 38,  78 => 37,  76 => 36,  74 => 35,  72 => 34,  70 => 33,  67 => 31,  64 => 27,  62 => 26,  60 => 25,  58 => 24,  55 => 22,  53 => 21,  51 => 20,  49 => 19,  47 => 18,  45 => 17,  42 => 15,  40 => 14,  37 => 12,  35 => 11,  33 => 10,  30 => 8,  28 => 7,  26 => 6,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -397,7 +400,7 @@ class __TwigTemplate_784a87ce1c8e9ea1da04729afbe5be55b8de651ba0e06a46fbb2160791a
 <body id=\"top\" class=\"{{ page.header.body_classes }}\">
 {% block header %}
     <nav class=\"navigation\">
-        <a href=\"{{ base_url == '' ? '/' : base_url }}\" class=\"logo\">Redactie Admiraal</a>
+        <a href=\"home\" class=\"logo\">Redactie Admiraal</a>
     {% block header_navigation %}
         {% include 'partials/navigation.html.twig' %}
     {% endblock %}
@@ -413,9 +416,12 @@ class __TwigTemplate_784a87ce1c8e9ea1da04729afbe5be55b8de651ba0e06a46fbb2160791a
 {% block content %}{% endblock %}
 </main>
 {% endblock %}
-
+<footer>
+    <script type='text/javascript' src='{{ url('plugin://simplesearch/js/simplesearch.js') }}'></script>
+</footer>
 </body>
 </html>
+
 ", "partials/base.html.twig", "C:\\wamp64\\www\\school\\jaar3\\redactieadmiraal\\grav\\user\\themes\\redactie-admiraal-webgem\\templates\\partials\\base.html.twig");
     }
 }

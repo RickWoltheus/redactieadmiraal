@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/wamp64/www/school/jaar3/redactieadmiraal/grav/user/config/plugins/simplesearch.yaml',
-    'modified' => 1511109911,
+    'modified' => 1511862119,
     'data' => [
         'search_content' => 'rendered',
         'enabled' => true,
@@ -11,6 +11,9 @@ return [
         'min_query_length' => 3,
         'route' => '/search',
         'template' => 'simplesearch_results',
+        'filters' => [
+            'category' => 'blog'
+        ],
         'filter_combinator' => 'and',
         'order' => [
             'by' => 'date',

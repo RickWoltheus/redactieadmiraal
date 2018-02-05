@@ -1,15 +1,22 @@
 ---
 title: ' Vrij van chronische depressie in 21 dagen '
 category: boeken
+twitterenable: true
+twittercardoptions: summary
+articleenabled: false
+orgaenabled: false
+eventenabled: false
+personenabled: false
+facebookenable: true
 custom:
+    category: boeken
     coverImage:
-        'user/pages/06.blog/08.vrij-van-chronische-depressie-in-21-dagen/plaatje Omslag Vrij van chronische depressie in 21 dagen.jpg':
+        'user/pages/04.portfolio/02.vrij-van-chronische-depressie-in-21-dagen/plaatje Omslag Vrij van chronische depressie in 21 dagen.jpg':
             name: 'plaatje Omslag Vrij van chronische depressie in 21 dagen.jpg'
             type: image/jpeg
             size: 13292
-            path: 'user/pages/06.blog/08.vrij-van-chronische-depressie-in-21-dagen/plaatje Omslag Vrij van chronische depressie in 21 dagen.jpg'
-    category: boeken
+            path: 'user/pages/04.portfolio/02.vrij-van-chronische-depressie-in-21-dagen/plaatje Omslag Vrij van chronische depressie in 21 dagen.jpg'
 catagory: redactie
 ---
 
-Eindredactie van het boek 'Vrij van chronische depressie in 21 dagen' van Tura Gerards. Een door Gerards ontwikkelde methode om jezelf, zonder medicatie, te verlossen van depressies die je overvallen. 
+<p>Eindredactie van het boek 'Vrij van chronische depressie in 21 dagen' van Tura Gerards. Een door Gerards ontwikkelde methode om jezelf, zonder medicatie, te verlossen van depressies die je overvallen.</p>

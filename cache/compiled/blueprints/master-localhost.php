@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledBlueprints',
-    'timestamp' => 1511346334,
-    'checksum' => 'fe3ffbc6ff652c50aa54a93af878dc16',
+    'timestamp' => 1511968722,
+    'checksum' => 'b026136d7ab3b75a7a9b8810c570ff65',
     'files' => [
         'system/blueprints/config' => [
             'media' => [
@@ -55,9 +55,13 @@ return [
                 'file' => 'user/plugins/problems/blueprints.yaml',
                 'modified' => 1509961836
             ],
+            'plugins/seo' => [
+                'file' => 'user/plugins/seo/blueprints.yaml',
+                'modified' => 1511355892
+            ],
             'plugins/simplesearch' => [
                 'file' => 'user/plugins/simplesearch/blueprints.yaml',
-                'modified' => 1510920791
+                'modified' => 1511861384
             ],
             'plugins/tinymce-editor' => [
                 'file' => 'user/plugins/tinymce-editor/blueprints.yaml',
@@ -3228,6 +3232,130 @@ return [
                 'name' => 'plugins.problems.built_in_css',
                 'validation' => 'strict'
             ],
+            'plugins.seo' => [
+                'type' => '_root',
+                'form_field' => false,
+                'form' => [
+                    'validation' => 'strict'
+                ]
+            ],
+            'plugins.seo.enabled' => [
+                'type' => 'toggle',
+                'label' => 'PLUGIN_ADMIN.PLUGIN_STATUS',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.seo.enabled',
+                'validation' => 'strict'
+            ],
+            'plugins.seo.article' => [
+                'type' => 'toggle',
+                'label' => 'Enable Article Microdata',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.seo.article',
+                'validation' => 'strict'
+            ],
+            'plugins.seo.event' => [
+                'type' => 'toggle',
+                'label' => 'Enable Event Microdata',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.seo.event',
+                'validation' => 'strict'
+            ],
+            'plugins.seo.restaurant' => [
+                'type' => 'toggle',
+                'label' => 'Enable Restaurant Microdata',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.seo.restaurant',
+                'validation' => 'strict'
+            ],
+            'plugins.seo.musicevent' => [
+                'type' => 'toggle',
+                'label' => 'Enable Music Event Microdata',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.seo.musicevent',
+                'validation' => 'strict'
+            ],
+            'plugins.seo.person' => [
+                'type' => 'toggle',
+                'label' => 'Enable Person Microdata',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.seo.person',
+                'validation' => 'strict'
+            ],
+            'plugins.seo.organization' => [
+                'type' => 'toggle',
+                'label' => 'Enable Organization Microdata',
+                'highlight' => 1,
+                'default' => 1,
+                'options' => [
+                    1 => 'PLUGIN_ADMIN.ENABLED',
+                    0 => 'PLUGIN_ADMIN.DISABLED'
+                ],
+                'validate' => [
+                    'type' => 'bool'
+                ],
+                'name' => 'plugins.seo.organization',
+                'validation' => 'strict'
+            ],
+            'plugins.seo.facebookid' => [
+                'type' => 'text',
+                'label' => 'Facebook App ID',
+                'name' => 'plugins.seo.facebookid',
+                'validation' => 'strict'
+            ],
+            'plugins.seo.twitterid' => [
+                'type' => 'text',
+                'label' => 'Twitter ID',
+                'name' => 'plugins.seo.twitterid',
+                'validation' => 'strict'
+            ],
             'plugins.simplesearch' => [
                 'type' => '_root',
                 'form_field' => false,
@@ -3897,6 +4025,17 @@ return [
                 'problems' => [
                     'enabled' => 'plugins.problems.enabled',
                     'built_in_css' => 'plugins.problems.built_in_css'
+                ],
+                'seo' => [
+                    'enabled' => 'plugins.seo.enabled',
+                    'article' => 'plugins.seo.article',
+                    'event' => 'plugins.seo.event',
+                    'restaurant' => 'plugins.seo.restaurant',
+                    'musicevent' => 'plugins.seo.musicevent',
+                    'person' => 'plugins.seo.person',
+                    'organization' => 'plugins.seo.organization',
+                    'facebookid' => 'plugins.seo.facebookid',
+                    'twitterid' => 'plugins.seo.twitterid'
                 ],
                 'simplesearch' => [
                     'enabled' => 'plugins.simplesearch.enabled',

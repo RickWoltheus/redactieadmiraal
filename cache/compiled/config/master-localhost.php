@@ -1,8 +1,8 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1511346334,
-    'checksum' => '51fb34037e80f04b2f96345cdc6051ff',
+    'timestamp' => 1511968727,
+    'checksum' => '8e13b92d5607c514abf8d19492ecc741',
     'files' => [
         'user/config' => [
             'groups' => [
@@ -17,9 +17,13 @@ return [
                 'file' => 'user/config/plugins/login.yaml',
                 'modified' => 1511299420
             ],
+            'plugins/seo' => [
+                'file' => 'user/config/plugins/seo.yaml',
+                'modified' => 1511356019
+            ],
             'plugins/simplesearch' => [
                 'file' => 'user/config/plugins/simplesearch.yaml',
-                'modified' => 1511109911
+                'modified' => 1511862119
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
@@ -27,7 +31,7 @@ return [
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1510136983
+                'modified' => 1511360697
             ],
             'streams' => [
                 'file' => 'user/config/streams.yaml',
@@ -35,7 +39,7 @@ return [
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1511340249
+                'modified' => 1511968715
             ]
         ],
         'system/config' => [
@@ -89,9 +93,13 @@ return [
                 'file' => 'user/plugins/problems/problems.yaml',
                 'modified' => 1509961836
             ],
+            'plugins/seo' => [
+                'file' => 'user/plugins/seo/seo.yaml',
+                'modified' => 1511355892
+            ],
             'plugins/simplesearch' => [
                 'file' => 'user/plugins/simplesearch/simplesearch.yaml',
-                'modified' => 1510920791
+                'modified' => 1511861384
             ],
             'plugins/tinymce-editor' => [
                 'file' => 'user/plugins/tinymce-editor/tinymce-editor.yaml',
@@ -269,6 +277,15 @@ return [
             'problems' => [
                 'enabled' => true,
                 'built_in_css' => true
+            ],
+            'seo' => [
+                'enabled' => true,
+                'article' => true,
+                'restaurant' => false,
+                'event' => true,
+                'organization' => true,
+                'musicevent' => false,
+                'person' => true
             ],
             'simplesearch' => [
                 'enabled' => true,

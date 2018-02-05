@@ -24,6 +24,7 @@ form:
       type: text
       label: PLUGIN_ADMIN.FOLDER_NAME
       help: PLUGIN_ADMIN.FOLDER_NAME_HELP
+      readonly: true
       validate:
         rule: slug
         required: true
@@ -32,6 +33,8 @@ form:
       type: parents
       label: PLUGIN_ADMIN.PARENT_PAGE
       classes: fancy
+      default: '/portfolio'
+      readonly: true
       validate:
         required: true
 
@@ -40,8 +43,9 @@ form:
       classes: fancy
       label: PLUGIN_ADMIN.PAGE_FILE
       help: PLUGIN_ADMIN.PAGE_FILE_HELP
-      data-options@: '\Grav\Plugin\AdminPlugin::pagesTypes'
-      data-default@: '\Grav\Plugin\Admin\Admin::getLastPageName'
+      data-options@: '\Grav\Common\Page\Pages::types'
+      #data-default@: '\Grav\Plugin\admin::getLastPageName'
+      default: 'project'
       validate:
         required: true
 

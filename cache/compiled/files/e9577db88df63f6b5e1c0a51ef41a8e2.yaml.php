@@ -2,7 +2,7 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => 'C:/wamp64/www/school/jaar3/redactieadmiraal/grav/user/plugins/simplesearch/simplesearch.yaml',
-    'modified' => 1510920791,
+    'modified' => 1511861384,
     'data' => [
         'enabled' => true,
         'built_in_css' => true,
